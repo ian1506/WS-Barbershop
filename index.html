@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WS Barbershop</title>
+        <!--Favicon-->
+        <link rel="shortcut icon" type="image/png" href="img/logo2.png"/>
+        <!--End of Favicon-->
+
+        <!--CSS Styles-->
+        <Link rel="stylesheet" href="css/styles.css" type="text/css" />      
+        <!--End of CSS Stytles-->
+
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+        <!--End of Google Fonts-->
+
+        <!--Import Responsive Nav-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--End-->
+        
+        <!--Import Slider-->
+        <link type="text/css" rel="stylesheet" href="css/lightslider.css" />                  
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js" integrity="sha256-spTpc4lvj4dOkKjrGokIrHkJgNA0xMS98Pw9N7ir9oI=" crossorigin="anonymous">
+        </script>     
+        <!--End-->
+
+
+    </head>
+    <body>
+        <!--Navigation-->
+        <nav id="nav-container" >
+            <ul class="nav-bar" id="nav">
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#about">About Us</a></li>
+
+                <li>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </li>
+            </ul>    
+        </nav>
+        <!--End of Navigation-->
+
+        <!--Slidee Banner-->
+        <section id="slider-container">
+             
+            <div id="slider">
+                <ul id="lightSlider">
+                    <li>
+                        <img src="img/barber1.jpg">
+                    </li>
+                    <li>
+                        <img src="img/barber2.jpg">
+                    </li>
+                    <li>
+                        <img src="img/barber3.jpg">
+                    </li>
+                </ul>   
+            </div>
+
+            <div id="logo-container"> 
+                <a href="index.html" ><img src="img/logo3.png" alt="East-Side Cutters Logo"></a>
+                <button onclick="window.location = 'appointment.html'">Schedule Appointment</button>
+            </div>
+            
+        </section>
+        <!--End of Slide Banner-->
+
+        <!--Tagline-->
+        <section id="about">
+            <article>
+                <h1>East Side Cutters</h1>
+                <p>
+                    Tempat pangkas rambut lokal di Madiun 
+                    yang menawarkan perawatan pria terbaik.
+                </p>
+                <p>081902000006</p>
+            </article>
+        </section>
+        <!--End of Tagline-->
+
+        <!--Img Gallery-->
+        <section id="gallery">
+             <img src="img/haircutgallery.jpeg">
+         </section>
+         <!--End of Img Gallery-->
+
+        <!--Schedule-->
+        <section id="schedule" class="grid-container">
+ 
+            <div class="grid-item">
+                <h1>Services</h1>
+                <ul class="service-list">
+                    <li>Standard Haircut - 20Rb (15 min)</li>
+                    <li>Beard Trim - 5Rb (5 min)</li>
+                    <li>Haircut and Beard - 25Rb (20 min)</li>
+                    <li>Facial - Free (10 min)</li>
+                    <li>Full Service - 30Rb (30 min)</li>
+                </ul>
+            </div>
+
+            <div class="grid-item">
+                <h1>Schedule</h1>
+                <table>
+                    <tr>
+                        <td>Senin - Minggu</td>
+                        <td>09.00 - 21.00 WIB</td>
+                    </tr>
+                </table>
+
+                <div class="btn">
+                    <button onclick="window.location = 'appointment.html'">Schedule Appointment</button>
+                </div>
+            </div>
+            
+        </section>
+        <!--End of Schedule-->
+
+        <!--Location-->
+        <section id="location">
+            <div class="location-details">
+                <h1>Location</h1>
+                <p>WS Barbershop</p>
+                <p>Dusun I, Sukolilo</p>
+                <p>Kec. Jiwan, Kabupaten Madiun</p>
+            </div>
+
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.560733655023!2d111.48226257319158!3d-7.622680175366829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79bf0b8af8dda7%3A0x6ea7b520532444a3!2sWS%20BARBERSHOP%20gerai%206!5e0!3m2!1sid!2sid!4v1733687272720!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </iframe>
+            </div>
+
+        </section>     
+        <!--End of Location-->
+
+        <!--Footer-->
+        <footer id="footer">
+            <ul>
+                <li>Phone Number: 081902000006</li>
+            </ul>
+        </footer>
+        <!--End of Footer-->
+
+        <!--JavaScript-->
+        <script src="js/lightslider.js"></script>  
+        <script>
+            function myFunction() {
+                var x = document.getElementById("nav");
+                if (x.className === "nav-bar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "nav-bar";
+                }
+            }
+        </script>
+  
+        <script type="text/javascript">
+            $(document).ready(function() {
+              $("#lightSlider").lightSlider({
+                  item: 1,
+                  auto: true,
+                  loop: true,
+              }); 
+
+            });
+          </script>
+        <!--End of JavaScript-->
+
+    </body>
+</html>
